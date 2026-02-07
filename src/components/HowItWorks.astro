@@ -1,0 +1,41 @@
+---
+import ScrollReveal from './ScrollReveal.tsx';
+---
+
+<section id="how-it-works" class="px-6 py-20 md:px-12 lg:px-24 lg:py-32 bg-cream">
+  <div class="max-w-4xl mx-auto text-center">
+    <ScrollReveal client:visible>
+      <h2 class="font-[var(--font-display)] font-extrabold text-4xl md:text-6xl text-charcoal mb-6">
+        Flat <span class="text-coral">&ne;</span> Broken
+      </h2>
+
+      <p class="text-lg md:text-xl text-charcoal/70 max-w-2xl mx-auto mb-12 leading-relaxed">
+        Matt's Flat has just enough carbonation to know it's there &mdash; a gentle,
+        barely-there effervescence that lets the flavor do the talking.
+      </p>
+    </ScrollReveal>
+
+    <ScrollReveal client:visible stagger={0.1} className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="bg-white rounded-2xl p-6 shadow-sm">
+        <div class="text-3xl mb-3">&#127754;</div>
+        <h3 class="font-[var(--font-display)] font-bold text-lg mb-2">Gentle</h3>
+        <p class="text-sm text-charcoal/60">Won't burn your throat</p>
+      </div>
+      <div class="bg-white rounded-2xl p-6 shadow-sm">
+        <div class="text-3xl mb-3">&#128069;</div>
+        <h3 class="font-[var(--font-display)] font-bold text-lg mb-2">Smooth</h3>
+        <p class="text-sm text-charcoal/60">Actually taste what you're drinking</p>
+      </div>
+      <div class="bg-white rounded-2xl p-6 shadow-sm">
+        <div class="text-3xl mb-3">&#10024;</div>
+        <h3 class="font-[var(--font-display)] font-bold text-lg mb-2">Present</h3>
+        <p class="text-sm text-charcoal/60">Still feels like a soft drink</p>
+      </div>
+      <div class="bg-white rounded-2xl p-6 shadow-sm">
+        <div class="text-3xl mb-3">&#128524;</div>
+        <h3 class="font-[var(--font-display)] font-bold text-lg mb-2">Calm</h3>
+        <p class="text-sm text-charcoal/60">Shake the bottle. We dare you.</p>
+      </div>
+    </ScrollReveal>
+  </div>
+</section>

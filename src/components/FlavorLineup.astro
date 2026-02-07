@@ -1,0 +1,21 @@
+---
+import ScrollReveal from './ScrollReveal.tsx';
+import FlavorCard from './FlavorCard.tsx';
+import { flavors } from '../data/flavors';
+---
+
+<section id="lineup" class="px-6 py-20 md:px-12 lg:px-24 lg:py-32 bg-cream">
+  <div class="max-w-7xl mx-auto">
+    <ScrollReveal client:visible className="text-center mb-16">
+      <h2 class="font-[var(--font-display)] font-extrabold text-4xl md:text-6xl text-charcoal">
+        Seven flavors. <span class="text-coral">Zero aggression.</span>
+      </h2>
+    </ScrollReveal>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {flavors.map((flavor) => (
+        <FlavorCard client:visible flavor={flavor} />
+      ))}
+    </div>
+  </div>
+</section>

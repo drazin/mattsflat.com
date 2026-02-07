@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  /* Base colors */
+  --color-cream: #FFF8F0;
+  --color-charcoal: #2D2D2D;
+
+  /* Accent */
+  --color-coral: #FF6B6B;
+  --color-electric-violet: #7C3AED;
+
+  /* Flavor pastels */
+  --color-flat-gold: #F5E6C8;
+  --color-flat-lavender: #DDD0F0;
+  --color-flat-yellow: #FFF3C4;
+  --color-flat-peach: #FDDCB5;
+  --color-flat-mint: #C8F0E0;
+  --color-flat-neon: #D4F5C0;
+  --color-flat-purple: #D8C4F0;
+
+  /* Typography */
+  --font-display: 'Nunito', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+}
