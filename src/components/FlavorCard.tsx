@@ -34,11 +34,12 @@ export default function FlavorCard({ flavor }: Props) {
   return (
     <div
       ref={cardRef}
-      className={`rounded-3xl overflow-hidden cursor-pointer transition-shadow duration-300 hover:shadow-xl bg-white ${
+      className={`rounded-3xl overflow-hidden cursor-pointer transition-shadow duration-300 hover:shadow-xl flex flex-col ${
         flavor.isHero ? 'md:col-span-2 md:row-span-2' : ''
       }`}
+      style={{ backgroundColor: flavor.color }}
     >
-      <div className="w-full aspect-[4/3] overflow-hidden">
+      <div className={`w-full overflow-hidden ${flavor.isHero ? 'flex-1 min-h-0' : 'aspect-[4/3]'}`}>
         <img
           src={`/images/flavors/${flavor.id}.png`}
           alt={`${flavor.name} can`}
@@ -47,7 +48,7 @@ export default function FlavorCard({ flavor }: Props) {
         />
       </div>
 
-      <div className="p-6 space-y-2" style={{ backgroundColor: flavor.color }}>
+      <div className="p-6 space-y-2">
         <span className="text-xs font-medium uppercase tracking-wider text-charcoal/50">
           {flavor.profile}
         </span>
