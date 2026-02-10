@@ -1,9 +1,10 @@
 ---
 import ScrollReveal from './ScrollReveal.tsx';
+import ComparisonCards from './ComparisonCards.tsx';
 ---
 
 <section id="problem" class="px-6 py-20 md:px-12 lg:px-24 lg:py-32 bg-white">
-  <div class="max-w-4xl mx-auto">
+  <div class="max-w-5xl mx-auto">
     <ScrollReveal client:visible className="space-y-8">
       <h2 class="font-[var(--font-display)] font-extrabold text-4xl md:text-6xl text-charcoal text-center">
         Your drink shouldn't <span class="text-coral">hurt.</span>
@@ -15,28 +16,8 @@ import ScrollReveal from './ScrollReveal.tsx';
       </p>
     </ScrollReveal>
 
-    <ScrollReveal client:visible delay={0.3} className="mt-16">
-      <div class="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
-        <div class="bg-red-50 rounded-2xl p-8 border-2 border-red-200">
-          <h3 class="font-[var(--font-display)] font-bold text-xl mb-4 text-red-500">Regular Soda</h3>
-          <ul class="space-y-2 text-charcoal/70">
-            <li>Burns your throat</li>
-            <li>Explodes when shaken</li>
-            <li>Assaults your taste buds</li>
-            <li>Will fight you</li>
-          </ul>
-        </div>
-
-        <div class="bg-green-50 rounded-2xl p-8 border-2 border-green-200">
-          <h3 class="font-[var(--font-display)] font-bold text-xl mb-4 text-green-600">Matt's Flat</h3>
-          <ul class="space-y-2 text-charcoal/70">
-            <li>Smooth and flavorful</li>
-            <li>Shake it all you want</li>
-            <li>Actually lets you taste things</li>
-            <li>Aggressively chill</li>
-          </ul>
-        </div>
-      </div>
-    </ScrollReveal>
+    <div class="mt-16">
+      <ComparisonCards client:visible />
+    </div>
   </div>
 </section>

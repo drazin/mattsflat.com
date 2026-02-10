@@ -34,16 +34,20 @@ export default function FlavorCard({ flavor }: Props) {
   return (
     <div
       ref={cardRef}
-      className={`rounded-3xl p-8 cursor-pointer transition-shadow duration-300 hover:shadow-xl ${
+      className={`rounded-3xl overflow-hidden cursor-pointer transition-shadow duration-300 hover:shadow-xl bg-white ${
         flavor.isHero ? 'md:col-span-2 md:row-span-2' : ''
       }`}
-      style={{ backgroundColor: flavor.color }}
     >
-      <div className="w-full aspect-square rounded-2xl bg-white/30 mb-6 flex items-center justify-center">
-        <span className="text-charcoal/30 font-[var(--font-display)] text-sm">Product Image</span>
+      <div className="w-full aspect-[4/3] overflow-hidden">
+        <img
+          src={`/images/flavors/${flavor.id}.png`}
+          alt={`${flavor.name} can`}
+          className="w-full h-full object-cover object-top"
+          loading="lazy"
+        />
       </div>
 
-      <div className="space-y-2">
+      <div className="p-6 space-y-2" style={{ backgroundColor: flavor.color }}>
         <span className="text-xs font-medium uppercase tracking-wider text-charcoal/50">
           {flavor.profile}
         </span>

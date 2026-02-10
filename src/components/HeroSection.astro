@@ -5,7 +5,7 @@ import LiquidHero from './LiquidHero.tsx';
 <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden">
   <LiquidHero client:only="react" />
 
-  <div class="relative z-10 text-center max-w-4xl mx-auto px-6">
+  <div class="relative z-10 text-center max-w-5xl mx-auto px-6">
     <h1 class="font-[var(--font-display)] font-black text-5xl md:text-7xl lg:text-8xl text-charcoal leading-tight mb-6">
       Less fizz.<br />
       More flavor.<br />
@@ -18,9 +18,15 @@ import LiquidHero from './LiquidHero.tsx';
 
     <a
       href="#waitlist"
-      class="inline-block bg-coral text-white font-[var(--font-display)] font-bold px-8 py-4 rounded-full hover:bg-coral/90 transition-all duration-300 text-lg"
+      class="inline-block bg-coral text-white font-[var(--font-display)] font-bold px-8 py-4 rounded-full hover:bg-coral/90 transition-all duration-300 text-lg mb-12"
     >
       Join the Waitlist
     </a>
+
+    <img
+      src="/images/hero-lineup.png"
+      alt="The full Matt's Flat lineup — seven flavors of flat soda"
+      class="w-full max-w-4xl mx-auto rounded-2xl shadow-2xl"
+    />
   </div>
 </section>
