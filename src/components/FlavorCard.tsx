@@ -40,12 +40,25 @@ export default function FlavorCard({ flavor }: Props) {
       style={{ backgroundColor: flavor.color }}
     >
       <div className={`w-full overflow-hidden ${flavor.isHero ? 'flex-1 min-h-0' : 'aspect-[4/3]'}`}>
-        <img
-          src={`/images/flavors/${flavor.id}.png`}
-          alt={`${flavor.name} can`}
-          className="w-full h-full object-cover object-top"
-          loading="lazy"
-        />
+        {flavor.id === 'original-flat' ? (
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover object-top"
+            poster={`/images/flavors/${flavor.id}.png`}
+          >
+            <source src={`/images/flavors/${flavor.id}.mp4`} type="video/mp4" />
+          </video>
+        ) : (
+          <img
+            src={`/images/flavors/${flavor.id}.png`}
+            alt={`${flavor.name} can`}
+            className="w-full h-full object-cover object-top"
+            loading="lazy"
+          />
+        )}
       </div>
 
       <div className="p-6 space-y-2">
